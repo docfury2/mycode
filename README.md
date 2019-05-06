@@ -1,5 +1,6 @@
 # mycode (Ansible)
-Learning how to leverage Ansible for Datacenter deployments
+Learning how to leverage Ansible for Datacenter deployments. Also want to learn how version control projects with git.
+
 ##Getting Started
 
 ###Prerequisites
