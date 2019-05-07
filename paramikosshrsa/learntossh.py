@@ -27,4 +27,4 @@ our_commands = ["touch sshworked.txt", "touch create.txt", "touch file3.txt", "l
 for x in our_commands:
     print(commandissue(x))
 
-print(commanissue(x).decode('utf-8'))
+print(commandissue(x).decode('utf-8'))

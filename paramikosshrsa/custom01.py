@@ -8,11 +8,19 @@ def commandissue(command_to_issue):
 
 sshsession = paramiko.SSHClient()
 
-mykey = paramiko.RSAKey.from_private_key_file("/home/student/.ssh/id_rsa")
+#mykey = paramiko.RSAKey.from_private_key_file("/home/student/.ssh/id_rsa")
 
-sshsession.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+#sshsession.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-sshsession.connect(hostname="10.10.2.3", username="bender", pkey=mykey)
+ipchk = input('Enter an IP address: ')
 
-def userinput(input_from_user):
-    
+user = input('Enter a username: ')
+
+passwd = input('Enter your password: ')
+
+sshsession.connect(hostname=('ipchk'), username=('user'), password=('passwd'))
+if ipchk == '10.10.2.3' and user == 'bender' and passwd == 'alta3':
+    print('success!')
+else:
+    print('done')
+#
