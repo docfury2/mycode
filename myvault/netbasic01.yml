@@ -1,0 +1,16 @@
+---
+- name: "Another network playbook example"
+  # The line below calls our group that does not have any clear-text password
+  hosts: aristaswitchessecure
+  # gather_facts ALWAYS runs setup.py (server module)
+  gather_facts: no # v2.5=< no is default if network_cli is selected for connection
+                   # if turned to yest you'll collect info about the loacal host :(
+  
+  vars_files:
+    - vault.yml
+
+  tasks:
+  # if we run this and have gather_facts set to no, then ansible_facts will be about our network devs
+  - name: "Harvest Arista Facts"
+    eos_facts:
+    when: ansible_network_os  == 'eos'
