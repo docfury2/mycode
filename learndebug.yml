@@ -1,7 +1,7 @@
 ---
 - name: How to print with debug
   hosts: localhost
-  gather_facts: no
+  gather_facts: yes
 
   vars:
     vendorip: '192.168.22.55'
